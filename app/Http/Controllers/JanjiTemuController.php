@@ -25,20 +25,11 @@ class JanjiTemuController extends Controller
         }
 
         return response([
-            'message' => 'Data Janji Empty',
+            'message' => 'Data Janji Temu Empty',
             'data' => null
         ], 400); 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -79,27 +70,17 @@ class JanjiTemuController extends Controller
 
         if(!is_null($dataJanji)) {
             return response([
-                'message' => 'Retrieve Data Success',
+                'message' => 'Retrieve Data Janji Success',
                 'data' => $dataJanji
             ], 200);
         }
 
         return response([
-            'message' => 'Janji Temu Not Found',
+            'message' => 'Data Janji Temu Not Found',
             'data' => null
         ], 404);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -114,7 +95,7 @@ class JanjiTemuController extends Controller
 
         if(is_null($janjiData)) {
             return response([
-                'message' => 'Data Not Found',
+                'message' => 'Data Janji Temu Not Found',
                 'data' => null
             ], 404);
         }
@@ -139,13 +120,13 @@ class JanjiTemuController extends Controller
 
         if($janjiData->save()) {
             return response([
-                'message' => 'Update Data Janji Success',
+                'message' => 'Update Data Janji Temu Success',
                 'data' => $janjiData
             ], 200);
         }
 
         return response([
-            'message' => 'Update Janji Failed',
+            'message' => 'Update Data Janji Temu Failed',
             'data' => null
         ], 400);
     }
@@ -162,20 +143,20 @@ class JanjiTemuController extends Controller
 
         if(is_null($janji)) {
             return response([
-                'message' => 'Janji Not Found',
+                'message' => 'Data Janji Temu Not Found',
                 'data' => null
             ], 404);
         }
 
         if($janji->delete()) {
             return response([
-                'message' => 'Delete Data Success',
+                'message' => 'Delete Data Janji Temu Success',
                 'data' => $janji
             ], 200);
         }
 
         return response([
-            'message' => 'Delete Data Failed',
+            'message' => 'Delete Data Janji Temu Failed',
             'data' => $janji
         ], 400);
     }

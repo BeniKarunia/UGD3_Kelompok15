@@ -73,13 +73,13 @@ class AuthController extends Controller
 
         if($usercheck) {
             return response([
-                'message' => 'User Found',
+                'message' => 'Data User Found',
                 'data' => User::where('username',$loginData["username"])->where("password",$loginData["password"])->first()
             ], 200);
         }
 
         return response([
-            'message' => 'User Not Found',
+            'message' => 'Data User Not Found',
             'data' => null
         ], 400);
     }

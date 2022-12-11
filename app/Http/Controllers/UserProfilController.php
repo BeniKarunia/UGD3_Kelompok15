@@ -31,33 +31,6 @@ class UserProfilController extends Controller
         ], 400); 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    // public function store(Request $request)
-    // {
-    //     $storeData = $request->all();
-    //     $validate = Validator::make($storeData, [
-    //         'namaLengkap' => 'required',
-    //         'username' => 'required',
-    //         'Email' => 'required||email:rfc,dns',
-    //         'nomorTelepon' => 'required',
-    //         'password' => 'required'
-    //     ]);
-
-    //     if($validate->fails()) 
-    //         return response(['message' => $validate->errors()], 400);
-            
-    //     $user = UserProfil::create($storeData);
-
-    //     return response([
-    //         'message' => 'Create User Success',
-    //         'data' => $user
-    //     ], 200);
-    // }
 
     /**
      * Display the specified resource.
@@ -77,7 +50,7 @@ class UserProfilController extends Controller
         }
 
         return response([
-            'message' => 'User Not Found',
+            'message' => 'Data User Not Found',
             'data' => null
         ], 404);
     }
@@ -95,7 +68,7 @@ class UserProfilController extends Controller
 
         if(is_null($userData)) {
             return response([
-                'message' => 'User Not Found',
+                'message' => 'Data User Not Found',
                 'data' => null
             ], 404);
         }
@@ -127,7 +100,7 @@ class UserProfilController extends Controller
         }
 
         return response([
-            'message' => 'Update User Failed',
+            'message' => 'Update Data User Failed',
             'data' => null
         ], 400);
     }
@@ -144,20 +117,20 @@ class UserProfilController extends Controller
 
         if(is_null($user)) {
             return response([
-                'message' => 'User Not Found',
+                'message' => 'Data User Not Found',
                 'data' => null
             ], 404);
         }
 
         if($user->delete()) {
             return response([
-                'message' => 'Delete Data Success',
+                'message' => 'Delete Data User Success',
                 'data' => $user
             ], 200);
         }
 
         return response([
-            'message' => 'Delete Data Failed',
+            'message' => 'Delete Data User Failed',
             'data' => $user
         ], 400);
     }

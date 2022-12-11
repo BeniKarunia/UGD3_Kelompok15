@@ -41,4 +41,5 @@ Route::post('checklogin', '\App\Http\Controllers\AuthController@check');
 
 Route::resource('user',\App\Http\Controllers\UserProfilController::class);
 Route::resource('janji',\App\Http\Controllers\JanjiTemuController::class);
+Route::resource('vaksin',\App\Http\Controllers\VaksinController::class);
 Route::resource('mahasiswa',\App\Http\Controllers\MahasiswaController::class);
